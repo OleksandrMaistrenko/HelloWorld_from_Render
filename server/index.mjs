@@ -12,11 +12,14 @@ server.register(fastifyStatic, {
   root: join(__dirname, "../build"),
 });
 
+const port = process.env.PORT || 1234;
+const host = process.env.HOST || "localhost"; //0.0.0.0
+
 server
-  .listen({ port: 1234 })
+  .listen({ port, host }) // host
   .then((address) => {
     console.log("Server started" + address);
   })
   .catch((err) => {
-    console.log("Error");
+    console.log("Error", err);
   });
