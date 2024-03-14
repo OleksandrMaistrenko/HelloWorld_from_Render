@@ -15,6 +15,10 @@ server.register(fastifyStatic, {
 const port = process.env.PORT || 1234;
 const host = process.env.HOST || "localhost"; //0.0.0.0
 
+server.get("/", (request, reply) => {
+  return reply.send("GET request received");
+});
+
 server
   .listen({ port, host }) // host
   .then((address) => {
