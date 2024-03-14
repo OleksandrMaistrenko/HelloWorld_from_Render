@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.mjs",
+  "type": "module",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -28,7 +29,7 @@
     "webpack": "^5.90.3"
   },
   "devDependencies": {
-    "type": "module",
+   
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
